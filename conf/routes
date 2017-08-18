@@ -4,6 +4,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.Application.index()
+GET     /aktuelles                  controllers.Application.news()
+GET     /honig                      controllers.Application.honey()
 GET     /imprint                    controllers.Application.imprint()
 
 # Map static resources from the /public folder to the /assets URL path

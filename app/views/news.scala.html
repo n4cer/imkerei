@@ -1,0 +1,13 @@
+@main("Aktuelles @ Honig-Räuberei") {
+    <h1>Aktuelles</h1>
+    
+    @if(flash.contains("success")) {
+    <p class="successs">
+        @flash.get("success")
+    </p>
+    }
+    
+    <p>
+      <b>Aufbau der Imkereihomepage</b><br>
+    </p>
+}

@@ -17,6 +17,14 @@ public class Application extends Controller {
     return ok(index.render());
   }
   
+  public Result news() {
+    return ok(news.render());
+  }
+  
+  public Result honey() {
+    return ok(honey.render());
+  }
+  
   public Result imprint() {
     String name = configuration.underlying().getString("owner.name");
     String street = configuration.underlying().getString("owner.street");
