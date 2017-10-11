@@ -1,13 +1,27 @@
+@import tags._
+
 @main("Honig @ Honig-Räuberei") {
     <h1>Honig</h1>
     
-    @if(flash.contains("success")) {
-    <p class="successs">
-        @flash.get("success")
-    </p>
-    }
-    
-    <p>
-      <b>Aufbau der Imkereihomepage</b><br>
-    </p>
+    <div>
+        @if(flash.contains("success")) {
+        <p class="successs">
+            @flash.get("success")
+        </p>
+        }
+        
+        <h2>Honigübersicht</h2>
+        <ul>
+            <li>Frühjahrsblüte</li>
+            <li>Sommerblüte</li>
+        </ul>
+        
+        <p>Möchten Sie Honig erwerben, melden Sie sich bitte bei mir oder kommen Sie einfach vorbei.</p>
+        @contact()
+        
+        <h2>kristallisierender Honig</h2>
+        <p>
+            Einige Honigsorten kristallisieren nach einigen Tagen und werden fest. Ob ein Honig flüssig bleibt oder fest wird, hängt vom Anteil der beiden Hauptzuckerarten des Honigs Fructose und Glucose ab. Überwiegt der Glucoseanteil, wird er relativ schnell fest, wie zum Beispiel beim Rapshonig. Überwiegt hingegen der Fructoseanteil, bleibt er lange flüssig. Einen Qualitätsunterschied gibt es dabei aber nicht, ganz im Gegenteil, dieser Vorgang ist ganz normal und zeugt von Reinheit und Naturbelassenheit des Honigs. Erwärmt man ihn im Wasserbad bei ca. 40° C wird er wieder flüssig. Über diese Temperatur sollte Honig aber nie erhitzt werden, da sonst die wertvollsten Honigbestandteile, wie Enzyme oder Aminosäuren verloren gehen. 
+        </p>
+    </div>
 }

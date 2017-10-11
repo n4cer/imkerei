@@ -1,13 +1,30 @@
 @main("Aktuelles @ Honig-Räuberei") {
     <h1>Aktuelles</h1>
     
-    @if(flash.contains("success")) {
-    <p class="successs">
-        @flash.get("success")
-    </p>
-    }
-    
-    <p>
-      <b>Aufbau der Imkereihomepage</b><br>
-    </p>
+    <div class="news">
+        @if(flash.contains("success")) {
+        <p class="successs">
+            @flash.get("success")
+        </p>
+        }
+        
+        <div class="panel panel-danger notice">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> keine Neuigkeiten</h3>
+            </div>
+            <div class="panel-body">
+                <p>keine Neuigkeiten</p>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div title="" class="col-sm-4">
+                        <span title="Datum" class="glyphicon glyphicon-send pull-left"></span>
+                        <div style="margin-left: 1.25em"><em>11.10.2017 20:00 Uhr</em></div>
+                    </div>
+                    <div class="col-sm-4"><!-- TODO --></div>
+                    <div class="col-sm-4"><!-- TODO --></div>
+                </div>
+            </div>
+        </div>
+    </div>
 }
