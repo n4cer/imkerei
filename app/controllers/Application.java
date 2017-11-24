@@ -34,7 +34,6 @@ public class Application extends Controller {
     for (int i = 0; i < email.length(); i++) {
       email_encoded += ("&#" + email.codePointAt(i) + ";");
     }
-    System.out.println(email_encoded);
     
     return ok(imprint.render(name, street, city, email_encoded));
   }
