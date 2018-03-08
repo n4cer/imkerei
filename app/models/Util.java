@@ -14,4 +14,20 @@ public class Util {
     
     return config.getString(key);
   }
+  
+  public static String getEmail() {
+    return getConfigValueByKey("owner.email");
+  }
+  
+  public static String getPhone() {
+    return getConfigValueByKey("owner.phone");
+  }
+  
+  public static String getAddress() {
+    return getConfigValueByKey("owner.street") + ", " + getConfigValueByKey("owner.city");
+  }
+  
+  public static String getName() {
+    return getConfigValueByKey("owner.name");
+  }
 }
