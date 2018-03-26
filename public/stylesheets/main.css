@@ -74,3 +74,9 @@ body {
     float: left;
     min-width: 300px;
 }
+
+/* gallery */
+.gallery img {
+    border: 1px solid black;
+    padding: 5px;
+}
