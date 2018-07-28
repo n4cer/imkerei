@@ -6,6 +6,7 @@
 GET     /                           controllers.Application.index()
 GET     /aktuelles                  controllers.Application.news()
 GET     /honig                      controllers.Application.honey()
+GET     /bienenschwarm                    controllers.Application.swarm()
 GET     /imprint                    controllers.Application.imprint()
 GET     /privacy                    controllers.Application.privacy()
 

@@ -1,0 +1,27 @@
+@import tags._
+
+@main("Bienenschwarm und Wespennester @ Honig-Räuberei") {
+    <h1>Bienenschwärme und Wespennester</h1>
+    
+    <div>
+        @if(flash.contains("success")) {
+        <p class="successs">
+            @flash.get("success")
+        </p>
+        }
+        
+        <h2>Bienenschwarm</h2>
+        <p>In Ihrem Garten, am Haus oder am Baum hängt ein Bienenschwarm? Der Schwarm hängt in Kladow, Gatow oder Groß-Glienicke?<br>
+			Dann können Sie sich gerne bei mir melden oder besser Sie wenden sich an einen der <a target="_blank" href="http://imkerverein-spandau.de/bienenschwarm">Schwarmfänger</a> vom Imkerverein Berlin-Spandau.<br >
+			Wir können uns lediglich um Honigbienenschwärme kümmern.<br><br>
+			Weitere Schwarmfänger finden Sie beim <a target="_blank" href="https://wordpress.imkerverband-berlin.de/index.php/schwarmfanger/" >Berliner Imkerverband</a>.
+		</p>
+		
+		<h2>Wespennester</h2>
+        <p>Sehr häufig erreichen mich Anfragen zu Bienen, bei denen es sich aber um Wespen handelt. Ich/wir entfernen keine Wespen- bzw. Hornissennester. Dies ist in der Regel nicht erlaubt und auch nicht notwendig.<br>
+		Es gibt in Deutschland nur 2 Arten von Wespen, die für den Menschen ein Ärgernis dastellen. Alle anderen Arten interessieren sich nicht für den Menschen und seine Nähe und können im Normalfall ignoriert werden, da Sie uns andersrum auch überhaupt nicht beachten, so lange die Nester nicht bedroht werden. Da die Nester im Herbst immer verlassen werden, reicht es meist aus abzuwarten. Die Nester werden dann verlassen und im nächsten Jahr auch nicht wieder besiedelt. Weitere Informationen und Hilfe bietet auch <a target="_blank" href="https://www.berlin.de/special/immobilien-und-wohnen/balkon-und-garten/3581032-739650-wespennest-am-haus-was-tun.html">berlin.de</a>.
+		</p>
+                
+        @contact()
+    </div>
+}

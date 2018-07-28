@@ -30,4 +30,8 @@ public class Util {
   public static String getName() {
     return getConfigValueByKey("owner.name");
   }
+  
+  public static String getRequestPath() {
+	  return play.mvc.Http.Context.current().request().path();
+  }
 }

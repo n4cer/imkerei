@@ -25,6 +25,10 @@ public class Application extends Controller {
     return ok(honey.render());
   }
   
+  public Result swarm() {
+    return ok(swarm.render());
+  }
+  
   public Result imprint() {
     String name = configuration.underlying().getString("owner.name");
     String street = configuration.underlying().getString("owner.street");

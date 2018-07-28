@@ -4,5 +4,9 @@
     <meta name="author" content="@Util.getConfigValueByKey("owner.name")">
     <meta name="publisher" content="@Util.getConfigValueByKey("owner.name")">
     <meta name="description" content="Hobbyimker Michael Dehler aus Berlin Kladow">
-    <meta name="keywords" content="Hobby-Imkerei, Imker, Honig, Spandau, Kladow, Gatow, Berlin, Imkerei, Michael Dehler">
+	@if(!Util.getRequestPath().contains("schwarm")) {
+	<meta name="keywords" content="@Util.getConfigValueByKey("keywords.standard")">
+	} else {
+	<meta name="keywords" content="@Util.getConfigValueByKey("keywords.swarm")">
+	}
     <meta name="robots" content="index, follow">
