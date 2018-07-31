@@ -11,13 +11,39 @@
         }
         
         <h2>Honigübersicht</h2>
-        <p>In der Regel produzieren wir jedes Jahr im Frühjahr und Sommer 2 Sorten Honig.</p>
+        <p>Wir haben dieses Jahr (2018) 3 Sorten Honig im Angebot.</p>
         <ul>
-            <li>Frühjahrsblüte</li>
-            <li>Sommerblüte</li>
+			<li>Frühjahrsblüte
+				<div class="gallery">
+					<a href="@routes.Assets.versioned("images/pics/Glas_Frueh.jpg")" data-fancybox="group" data-caption="Bienenstand">
+						<img src="@routes.Assets.versioned("images/pics/Glas_Frueh_preview.png")" alt="500g-Glas Frühjahrsblüte" width="160" height="120" />
+					</a>
+				</div>
+			</li>
+			<li>Sommerblüte
+				<div class="gallery">
+					<a href="@routes.Assets.versioned("images/pics/Glas_Sommer.jpg")" data-fancybox="group" data-caption="Bienenstand">
+						<img src="@routes.Assets.versioned("images/pics/Glas_Sommer_preview.png")" alt="500g-Glas Sommerblüte" width="160" height="120" />
+					</a>
+				</div>
+			</li>
+			<li>Mischung aus Frühjahrsblüte und Sommerblüte</li>
         </ul>
         
-        <p>Möchten Sie Honig erwerben, teilen Sie dies bitte telefonisch oder per E-Mail mit.</p>
+        <p>Der Honig kann für 6€ je 500g Glas erworben werden. Kartenzahlung ist auch möglich :D
+		<div style="font-size: 18px">
+			<i class="pf pf-visa"></i>
+			<i class="pf pf-visa-pay"></i>
+			<i class="pf pf-maestro"></i>
+			<i class="pf pf-mastercard"></i>
+			<i class="pf pf-american-express"></i>
+			<i class="pf pf-apple-pay"></i>
+			<i class="pf pf-contactless-alt"></i>
+			<i class="pf pf-contactless"></i>
+			<i class="pf pf-paypal"></i>
+			<i class="pf pf-bitcoin"></i>
+		</div>
+		</p>
         @contact()
     </div>
 }
