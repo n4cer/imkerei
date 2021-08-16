@@ -1,15 +1,51 @@
 @main("Aktuelles @ Honig-Räuberei") {
     <h1>Aktuelles</h1>
-    
+
     <div class="news">
         @if(flash.contains("success")) {
-        <p class="successs">
+            <p class="successs">
             @flash.get("success")
-        </p>
+            </p>
         }
         <div class="panel panel-danger notice">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> Honig</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i>
+                    Honig und die Verkaufsbox an der Straße</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Dieses Jahr stehen wieder 2 Sorten Honig zum <a href="@routes.Application.honey()">Verkauf</a>.<br>
+                    Zusätzlich gibt es jetzt auch eine Verkaufsbox an der Straße, welche täglich befüllt wird, solange Honig vorrätig ist.
+                </p>
+                <div class="gallery">
+                    <a href="@routes.Assets.versioned("images/pics/2021_Glaeser_Frueh.jpg")" data-fancybox="group" data-caption="Verkauf 2021">
+                        <img src="@routes.Assets.versioned("images/pics/2021_Glaeser_Frueh_preview.jpg")" alt="500g-Gläser Frühjahrsblüte" width="160" height="120" />
+                    </a>
+                    <a href="@routes.Assets.versioned("images/pics/2021_Glaeser_Sommer.jpg")" data-fancybox="group" data-caption="Verkauf 2021">
+                        <img src="@routes.Assets.versioned("images/pics/2021_Glaeser_Sommer_preview.jpg")" alt="500g-Gläser Sommerblüte" width="160" height="120" />
+                    </a>
+                    <a href="@routes.Assets.versioned("images/pics/Box_aussen.jpg")" data-fancybox="group" data-caption="Verkauf 2021">
+                        <img src="@routes.Assets.versioned("images/pics/Box_aussen_preview.jpg")" alt="Verkaufsbox von außen" width="160" height="120" />
+                    </a>
+                    <a href="@routes.Assets.versioned("images/pics/Box_innen.jpg")" data-fancybox="group" data-caption="Verkauf 2021">
+                        <img src="@routes.Assets.versioned("images/pics/Box_innen_preview.jpg")" alt="Verkaufsbox von innen" width="160" height="120" />
+                    </a>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div title="" class="col-sm-4">
+                        <span title="Datum" class="glyphicon glyphicon-send pull-left"></span>
+                        <div style="margin-left: 1.25em"><em>August 2021</em></div>
+                    </div>
+                    <div class="col-sm-4"><!-- TODO --></div>
+                    <div class="col-sm-4"><!-- TODO --></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info notice">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="glyphicon glyphicon-info-sign"></i> Honig</h3>
             </div>
             <div class="panel-body">
                 <p>Dieses Jahr stehen wieder 2 Sorten Honig zum <a href="@routes.Application.honey()">Verkauf</a>.</p>
@@ -25,12 +61,13 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-danger notice">
+        <div class="panel panel-info notice">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> Honig</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-info-sign"></i> Honig</h3>
             </div>
             <div class="panel-body">
-                <p>Es stehen 2 Sorten Honig zum <a href="@routes.Application.honey()">Verkauf</a>. Ansonsten gibt es nichts Neues :D</p>
+                <p>Es stehen 2 Sorten Honig zum <a href="@routes.Application.honey()">Verkauf</a>
+                    . Ansonsten gibt es nichts Neues :D</p>
             </div>
             <div class="panel-footer">
                 <div class="row">
@@ -43,9 +80,9 @@
                 </div>
             </div>
         </div>
-		<div class="panel panel-danger notice">
+        <div class="panel panel-info notice">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> Honig</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-info-sign"></i> Honig</h3>
             </div>
             <div class="panel-body">
                 <p>Es stehen 3 Sorten Honig zum <a href="@routes.Application.honey()">Verkauf</a>.</p>
@@ -61,9 +98,9 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-danger notice">
+        <div class="panel panel-info notice">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> Der Bienenstand</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-info-sign"></i> Der Bienenstand</h3>
             </div>
             <div class="panel-body">
                 <p>Bilder vom Bienenstand</p>
@@ -84,9 +121,9 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-danger notice">
+        <div class="panel panel-info notice">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> Der Frühling nimmt Fahrt auf</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-info-sign"></i> Der Frühling nimmt Fahrt auf</h3>
             </div>
             <div class="panel-body">
                 <p>Erste echte Trachten kündigen sich an.</p>
@@ -113,19 +150,19 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-danger notice">
+        <div class="panel panel-info notice">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i> Frühling</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-info-sign"></i> Frühling</h3>
             </div>
             <div class="panel-body">
                 <p>Der Frühling ist da.<br> An den wärmeren Tagen sammeln die Bienen bereits Pollen und etwas Nektar.</p>
                 <div class="gallery">
-	                <a href="@routes.Assets.versioned("images/pics/Krokus_Biene.jpg")" data-fancybox="group" data-caption="Biene auf Krokus">
-	                    <img src="@routes.Assets.versioned("images/pics/Krokus_Biene_preview.png")" alt="" width="320" height="240" />
-	                </a>
-	                <a href="@routes.Assets.versioned("images/pics/Traube_Biene.jpg")" data-fancybox="group" data-caption="Biene auf Traubenhyazinthe">
-	                    <img src="@routes.Assets.versioned("images/pics/Traube_Biene_preview.png")" alt="" width="320" height="240" />
-	                </a>
+                    <a href="@routes.Assets.versioned("images/pics/Krokus_Biene.jpg")" data-fancybox="group" data-caption="Biene auf Krokus">
+                        <img src="@routes.Assets.versioned("images/pics/Krokus_Biene_preview.png")" alt="" width="320" height="240" />
+                    </a>
+                    <a href="@routes.Assets.versioned("images/pics/Traube_Biene.jpg")" data-fancybox="group" data-caption="Biene auf Traubenhyazinthe">
+                        <img src="@routes.Assets.versioned("images/pics/Traube_Biene_preview.png")" alt="" width="320" height="240" />
+                    </a>
                 </div>
             </div>
             <div class="panel-footer">
