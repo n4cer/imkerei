@@ -1,10 +1,12 @@
+@()(implicit request: Http.Request)
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="author" content="@Util.getConfigValueByKey("owner.name")">
     <meta name="publisher" content="@Util.getConfigValueByKey("owner.name")">
     <meta name="description" content="Hobbyimker Michael Dehler aus Berlin Kladow">
-	@if(!Util.getRequestPath().contains("schwarm")) {
+	@if(!Util.getRequestPath(request).contains("schwarm")) {
 	<meta name="keywords" content="@Util.getConfigValueByKey("keywords.standard")">
 	} else {
 	<meta name="keywords" content="@Util.getConfigValueByKey("keywords.swarm")">

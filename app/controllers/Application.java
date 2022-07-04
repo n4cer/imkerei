@@ -8,28 +8,29 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.*;
+import play.mvc.Http;
 
 public class Application extends Controller {
   @Inject FormFactory formFactory;
   @Inject Configuration configuration;
 
-  public Result index() {
-    return ok(index.render());
+  public Result index(Http.Request request) {
+    return ok(index.render(request));
   }
   
-  public Result news() {
-    return ok(news.render());
+  public Result news(Http.Request request) {
+    return ok(news.render(request));
   }
   
-  public Result honey() {
-    return ok(honey.render());
+  public Result honey(Http.Request request) {
+    return ok(honey.render(request));
   }
   
-  public Result swarm() {
-    return ok(swarm.render());
+  public Result swarm(Http.Request request) {
+    return ok(swarm.render(request));
   }
   
-  public Result imprint() {
+  public Result imprint(Http.Request request) {
     String name = configuration.underlying().getString("owner.name");
     String street = configuration.underlying().getString("owner.street");
     String city = configuration.underlying().getString("owner.city");
@@ -39,10 +40,10 @@ public class Application extends Controller {
       email_encoded += ("&#" + email.codePointAt(i) + ";");
     }
     
-    return ok(imprint.render(name, street, city, email_encoded));
+    return ok(imprint.render(name, street, city, email_encoded, request));
   }
   
-  public Result privacy() {
+  public Result privacy(Http.Request request) {
     String name = configuration.underlying().getString("owner.name");
     String street = configuration.underlying().getString("owner.street");
     String city = configuration.underlying().getString("owner.city");
@@ -53,6 +54,6 @@ public class Application extends Controller {
       email_encoded += ("&#" + email.codePointAt(i) + ";");
     }
     
-    return ok(privacy.render(name, street, city, country, email_encoded));
+    return ok(privacy.render(name, street, city, country, email_encoded, request));
   }
 }

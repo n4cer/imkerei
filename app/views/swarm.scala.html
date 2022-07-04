@@ -1,15 +1,11 @@
+@()(implicit request: Http.Request)
+
 @import tags._
 
 @main("Bienenschwarm und Wespennester @ Honig-Räuberei") {
     <h1>Bienenschwärme und Wespennester</h1>
     
     <div>
-        @if(flash.contains("success")) {
-        <p class="successs">
-            @flash.get("success")
-        </p>
-        }
-        
         <h2>Bienenschwarm</h2>
         <p>In Ihrem Garten, am Haus oder am Baum hängt ein Bienenschwarm? Der Schwarm hängt in Kladow, Gatow oder Groß-Glienicke?<br>
 			Dann können Sie sich gerne bei mir melden oder besser Sie wenden sich an einen der <a target="_blank" href="http://imkerverein-spandau.de/bienenschwarm">Schwarmfänger</a> vom Imkerverein Berlin-Spandau.<br >

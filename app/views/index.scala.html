@@ -1,15 +1,10 @@
+@()(implicit request: Http.Request)
 @import tags._
 
 @main("Startseite Honig-Räuberei") {
     <h1>Hobbyimkerei Dehler</h1>
     
     <div>
-        @if(flash.contains("success")) {
-        <p class="successs">
-            @flash.get("success")
-        </p>
-        }
-        
         <p>
           Willkommen!<br>
           Ich bin seit 2016 Hobbyimker in Berlin Kladow und auf diesen Seiten kann man evtl. Dinge über mich, meine Bienen und den von meinen Bienen produzierten Honig lesen.<br>

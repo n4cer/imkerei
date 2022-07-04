@@ -2,16 +2,19 @@ package models;
 
 import java.security.SecureRandom;
 
-import play.Configuration;
-import play.api.Play;
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+import play.mvc.Http;
+import play.libs.typedmap.TypedMap;
+import play.routing.Router;
+import play.routing.Router.Attrs;
 
 public class Util {
   public static final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   public static SecureRandom rnd = new SecureRandom();
   
   public static String getConfigValueByKey(String key) {
-    Configuration config = Play.current().injector().instanceOf(Configuration.class);
-    
+    Config config = ConfigFactory.load();
     return config.getString(key);
   }
   
@@ -31,7 +34,8 @@ public class Util {
     return getConfigValueByKey("owner.name");
   }
   
-  public static String getRequestPath() {
-	  return play.mvc.Http.Context.current().request().path();
+  public static String getRequestPath(Http.Request request) {
+    TypedMap tags = request.attrs();
+    return tags.get(Attrs.HANDLER_DEF).controller() + "." + tags.get(Router.Attrs.HANDLER_DEF).method();
   }
 }

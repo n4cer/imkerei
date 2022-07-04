@@ -1,13 +1,33 @@
+@()(implicit request: Http.Request)
+
 @main("Aktuelles @ Honig-Räuberei") {
     <h1>Aktuelles</h1>
 
     <div class="news">
-        @if(flash.contains("success")) {
-            <p class="successs">
-            @flash.get("success")
-            </p>
-        }
         <div class="panel panel-danger notice">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i>
+                    Frühjahrshonig
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Der Frühjahrshonig steht zum <a href="@routes.Application.honey()">Verkauf</a>.<br>
+                    Das zweite Jahr in Folge kristallisiert dieser sehr früh und wird damit vor dem Verkauf cremig gerührt.
+                </p>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div title="" class="col-sm-4">
+                        <span title="Datum" class="glyphicon glyphicon-send pull-left"></span>
+                        <div style="margin-left: 1.25em"><em>Juli 2022</em></div>
+                    </div>
+                    <div class="col-sm-4"><!-- TODO --></div>
+                    <div class="col-sm-4"><!-- TODO --></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info notice">
             <div class="panel-heading">
                 <h3 class="panel-title"><i class="glyphicon glyphicon-fire"></i>
                     Honig und die Verkaufsbox an der Straße</h3>

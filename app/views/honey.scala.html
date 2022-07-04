@@ -1,17 +1,12 @@
+@()(implicit request: Http.Request)
 @import tags._
 
 @main("Honig @ Honig-Räuberei") {
     <h1>Honig</h1>
     
     <div>
-        @if(flash.contains("success")) {
-        <p class="successs">
-            @flash.get("success")
-        </p>
-        }
-        
         <h2>Honigübersicht</h2>
-        <p>Wir haben dieses Jahr (2021) 2 Sorten Honig im Angebot.</p>
+        <p>Wir haben dieses Jahr (2022) 2 Sorten Honig im Angebot.</p>
         <ul>
 			<li>Frühjahrsblüte</li>
 			<li>Sommerblüte</li>
@@ -31,7 +26,7 @@
 			</a>
 		</div>
         
-        <p>Der Honig kann für 6€ je 500g Glas erworben werden. Kartenzahlung ist auch möglich :D
+        <p>Der Honig kann für 7€ je 500g Glas erworben werden. Kartenzahlung ist auch möglich :D
 		<div style="font-size: 18px">
 			<i class="pf pf-visa"></i>
 			<i class="pf pf-visa-pay"></i>
